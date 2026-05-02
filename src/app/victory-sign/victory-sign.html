@@ -1,6 +1,10 @@
 <div class="victory-overlay">
     <div class="victory-card">
-        <h2>Congratulations {{ game.turn() }}, you've won the game!</h2>
+        @if (game.winner() === 'X' || game.winner() === 'O') {
+            <h2>Congratulations {{ game.winner() }}, you've won the game!</h2>
+        } @else {
+            <h2>Congratulations! You've managed not to win!</h2>
+        }
         <button (click)="game.reset()">Play Again</button>
     </div>
 </div>
