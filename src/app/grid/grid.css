@@ -3,23 +3,24 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-    background-color: #00FFFF;
+    background-color: #193c60;
+    padding: 20px;
     width: 720px;
     height: 720px;
-    border: 5px solid rgb(0,0,0,0.25);
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .square {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: #f4f1de;
     width: 220px;
     height: 220px;
     border-radius: 25px;
     overflow: hidden;
-    border: 15px solid #970000;
+    border: none;
+    box-shadow: inset 0px 10px 15px rgba(0, 0, 0, 0.4);
     transition: transform .25s;
 }
 
@@ -30,17 +31,23 @@
 }
 
 .circle {
-    border: 20px solid white;
+    border: 20px solid #4dbdc9;
     width: 130px;
     height: 130px;
     border-radius: 85px;
+    
+    /* Efecto de relieve: sombra hacia abajo para que parezca una pieza física */
+    box-shadow: 0px 5px 0px #34818a;
 }
 
 .material-symbols-rounded.cross {
     display: inline-block; 
-    color: white;
+    color: #f2705c;
     font-size: 16rem;
     font-weight: 1000;
+    
+    /* Como es un icono/fuente, el drop-shadow calca la silueta exacta de la X */
+    filter: drop-shadow(0px 5px 0px #b65445);
 }
 
 @keyframes appear {
