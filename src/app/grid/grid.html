@@ -1,0 +1,12 @@
+<div class="grid">
+    @for (item of game.board(); track $index) {
+        <button class="square" mat-button (click)="game.makeMove($index)">
+            @if (item === 'X') {
+                <div class="material-symbols-rounded cross" animate.enter="ani-pop-in" animate.leave="ani-pop-out">close</div>
+            } 
+            @else if (item === 'O') {
+                <div class="circle" animate.enter="ani-pop-in" animate.leave="ani-pop-out"></div>
+            }
+        </button>
+    }
+</div>

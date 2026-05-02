@@ -1,0 +1,77 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    background-color: #00FFFF;
+    width: 720px;
+    height: 720px;
+    border: 5px solid rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 220px;
+    height: 220px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 15px solid #970000;
+    transition: transform .25s;
+}
+
+.square:hover {
+    transform: scale(1.025);
+    transition: transform .25s;
+    cursor: pointer;
+}
+
+.circle {
+    border: 20px solid white;
+    width: 130px;
+    height: 130px;
+    border-radius: 85px;
+}
+
+.material-symbols-rounded.cross {
+    display: inline-block; 
+    color: white;
+    font-size: 16rem;
+    font-weight: 1000;
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    75% {
+        transform:  scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pop-out {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* Clases que aplicará Angular */
+.ani-pop-in {
+    animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.ani-pop-out {
+    animation: pop-out 0.2s ease-in forwards;
+}
