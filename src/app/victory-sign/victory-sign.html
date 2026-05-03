@@ -1,5 +1,6 @@
 <div class="victory-overlay">
     <div class="victory-card">
+        <!-- Message logic for both winner and draw scenarios -->
         @if (game.winner() === 'X' || game.winner() === 'O') {
             <h2>Congratulations {{ game.winner() }}, you've won the game!</h2>
         } @else {

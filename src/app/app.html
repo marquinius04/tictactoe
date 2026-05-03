@@ -41,8 +41,11 @@
   }
 </style>
 
+<!-- Main application shell -->
 <main class="main">
   <app-grid></app-grid>
+
+  <!-- Victory modal only renders when a result is determined -->
   @if (game.winner()) {
     <app-victory-sign></app-victory-sign>
   }

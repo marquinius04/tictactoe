@@ -5,9 +5,9 @@ import { Game } from '../game';
   selector: 'app-grid',
   imports: [],
   templateUrl: './grid.html',
-  styleUrl: './grid.css',
+  styleUrls: ['./grid.css']
 })
-
 export class Grid {
+  // Dependency injection for the shared game logic
   public game = inject(Game);
 }

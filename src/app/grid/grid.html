@@ -1,6 +1,9 @@
+<!-- Main game board container -->
 <div class="grid">
+    <!-- Loop through the board signal to render squares -->
     @for (item of game.board(); track $index) {
         <button class="square" mat-button (click)="game.makeMove($index)">
+            <!-- Conditional rendering for player symbols with exit animations -->
             @if (item === 'X') {
                 <div class="material-symbols-rounded cross" animate.enter="ani-pop-in" animate.leave="ani-pop-out">close</div>
             } 
